@@ -4,7 +4,7 @@
 ## Step 2: Exploring and preparing the data ---- 
 
 # read the sms data into the sms data frame
-sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+sms_raw <- read.csv("~/machinelearningwithr/chapter 4/sms_spam.csv", stringsAsFactors = FALSE)
 
 # examine the structure of the sms data
 str(sms_raw)
@@ -66,6 +66,10 @@ wordcloud(spam$text, max.words = 40, scale = c(3, 0.5))
 wordcloud(ham$text, max.words = 40, scale = c(3, 0.5))
 
 # indicator features for frequent words
+setClass("Dictionary",contains = "character")
+Dictionary <- function(x) UseMethod("Dictionary", x)
+Dictionary.character <- function(x){new("Dictionary", .Data = x)}
+Dictionary.TermDocumentMatrix <- Dictionary.DocumentTermMatrix <- function(x) {new("Dictionary", .Data = Terms(x))}
 findFreqTerms(sms_dtm_train, 5)
 sms_dict <- Dictionary(findFreqTerms(sms_dtm_train, 5))
 sms_train <- DocumentTermMatrix(sms_corpus_train, list(dictionary = sms_dict))

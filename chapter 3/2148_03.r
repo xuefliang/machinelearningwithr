@@ -4,7 +4,7 @@
 ## Step 2: Exploring and preparing the data ---- 
 
 # import the CSV file
-wbcd <- read.csv("wisc_bc_data.csv", stringsAsFactors = FALSE)
+wbcd <- read.csv("~/machinelearningwithr/chapter 3/wisc_bc_data.csv", stringsAsFactors = FALSE)
 
 # examine the structure of the wbcd data frame
 str(wbcd)
