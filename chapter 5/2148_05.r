@@ -11,7 +11,7 @@ curve(-x * log2(x) - (1 - x) * log2(1 - x),
 
 ## Example: Identifying Risky Bank Loans ----
 ## Step 2: Exploring and preparing the data ----
-credit <- read.csv("credit.csv")
+credit <- read.csv("~/machinelearningwithr/chapter 5/credit.csv")
 str(credit)
 
 # look at two characteristics of the applicant
@@ -105,7 +105,7 @@ CrossTable(credit_test$default, credit_cost_pred,
 
 ## Example: Identifying Poisonous Mushrooms ----
 ## Step 2: Exploring and preparing the data ---- 
-mushrooms <- read.csv("mushrooms.csv", stringsAsFactors = TRUE)
+mushrooms <- read.csv("~/machinelearningwithr/chapter 5/mushrooms.csv", stringsAsFactors = TRUE)
 
 # examine the structure of the data frame
 str(mushrooms)

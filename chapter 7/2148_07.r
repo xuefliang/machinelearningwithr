@@ -5,7 +5,7 @@
 
 ## Step 2: Exploring and preparing the data ----
 # read in data and examine structure
-concrete <- read.csv("concrete.csv")
+concrete <- read.csv("~/machinelearningwithr/chapter 7/concrete.csv")
 str(concrete)
 
 # custom normalization function
@@ -68,7 +68,7 @@ cor(predicted_strength2, concrete_test$strength)
 
 ## Step 2: Exploring and preparing the data ----
 # read in data and examine structure
-letters <- read.csv("letterdata.csv")
+letters <- read.csv("~/machinelearningwithr/chapter 7/letterdata.csv")
 str(letters)
 
 # divide into training and test data

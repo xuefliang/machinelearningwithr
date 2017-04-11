@@ -4,7 +4,7 @@
 
 ## Understanding regression ----
 ## Example: Space Shuttle Launch Data ----
-launch <- read.csv("challenger.csv")
+launch <- read.csv("~/machinelearningwithr/chapter 6/challenger.csv")
 
 # estimate beta manually
 b <- cov(launch$temperature, launch$distress_ct) / var(launch$temperature)
@@ -50,7 +50,7 @@ model
 
 ## Example: Predicting Medical Expenses ----
 ## Step 2: Exploring and preparing the data ----
-insurance <- read.csv("insurance.csv", stringsAsFactors = TRUE)
+insurance <- read.csv("~/machinelearningwithr/chapter 6/insurance.csv", stringsAsFactors = TRUE)
 str(insurance)
 
 # summarize the charges variable
@@ -119,7 +119,7 @@ sdr_b
 
 ## Example: Estimating Wine Quality ----
 ## Step 2: Exploring and preparing the data ----
-wine <- read.csv("whitewines.csv")
+wine <- read.csv("~/machinelearningwithr/chapter 6/whitewines.csv")
 
 # examine the wine data
 str(wine)
@@ -200,3 +200,4 @@ cor(p.m5p, wine_test$quality)
 # mean absolute error of predicted and true values
 # (uses a custom function defined above)
 MAE(wine_test$quality, p.m5p)
+
