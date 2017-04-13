@@ -1,7 +1,7 @@
 ##### Chapter 10: Evaluating Model Performance -------------------
 
 ## Confusion matrixes in R ----
-sms_results <- read.csv("sms_results.csv")
+sms_results <- read.csv("~/machinelearningwithr/chapter 10/sms_results.csv")
 head(sms_results)
 head(subset(sms_results, actual_type != predict_type))
 
@@ -93,7 +93,7 @@ as.numeric(perf.auc@y.values)
 
 # partitioning data
 library(caret)
-credit <- read.csv("credit.csv")
+credit <- read.csv("~/machinelearningwithr/chapter 10/credit.csv")
 
 # Holdout method
 # using random IDs

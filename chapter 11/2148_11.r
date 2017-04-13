@@ -1,7 +1,7 @@
 ##### Chapter 11: Improving Model Performance -------------------
 
 # load the credit dataset
-credit <- read.csv("credit.csv")
+credit <- read.csv("~/machinelearningwithr/chapter 11/credit.csv")
 library(caret)
 
 ## Creating a simple tuned model ----
